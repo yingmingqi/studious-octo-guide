@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<style>body{margin:0px;overflow:hidden}</style>
+		<style>body{background-image: url(201903031841277444.jpg);background-size:cover;background-position:center top}</style>
+		<style>.main{height:60%;width:80%;margin:10%}</style>
+		<link rel="stylesheet" type="text/css" href="Terminal.css">
+		<script type="text/javascript" src="Terminal.js"></script>
+		<style>
+		.content{background-image:inherit;position:absolute;overflow:hidden;z-index:2;padding:0px;border:0.5px #505050;border-style:hidden solid solid solid;border-radius:1px;box-shadow:0 10px 20px rgba(0,0,0,0.5);box-sizing:border-box}
+		.content::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;filter:blur(20px);z-index:-3;margin:-30px;background-image:inherit;background-position:center top;background-size:cover;background-attachment:fixed}
+		.title{height:26px;background-color:#3e3c3c}
+		.msgbox{top:24px;bottom:0px;width:100%;position:absolute;overflow:hidden;color:#1ff042}
+		#message{padding-top:3px}
+		#message p{margin-left:8px;margin-top:2px;margin-bottom:0px;font-family:'AndaleMono',monospace;font-weight:bold;font-size:0.8em;letter-spacing:0.05em;white-space:pre-wrap;line-height:1}
+		@-webkit-keyframes cursor-blink{0%{opacity:0}
+		50%{opacity:1}
+		100%{opacity:0}
+		}.input{margin:8px;font-family:'AndaleMono',monospace;font-weight:bold;font-size:0.8em;letter-spacing:0.05em;white-space:pre-wrap;line-height:1}
+		.input:before{content:'root@admin:~$ ';display:inline-block}
+		.input:after{content:'';display:inline-block;vertical-align:-0.15em;width:0.8em;height:0.15em;margin-left:5px;background:#1ff042;box-shadow:1px 1px 1px rgba(31,240,66,0.65),-1px -1px 1px rgba(31,240,66,0.65),1px -1px 1px rgba(31,240,66,0.65),-1px 1px 1px rgba(31,240,66,0.65);animation:cursor-blink 1.25s steps(1) infinite}
+		.hiddenbox{opacity:0;position:fixed;top:0;left:0}
+		</style>
+	</head>
+	<body>
+		<div class=" main content" id="Terminal"></div>
+	</body>
+</html>

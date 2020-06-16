@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Responsive Read Page</title>
+    <style>
+      body, div, h3, p, input { margin: 0;padding: 0;overflow: hidden; }
+      a { text-decoration: none; }
+      body { 
+        user-select: none;
+        font-family: PingFangSC-Regular,HelveticaNeue-Light,'Helvetica Neue Light','Microsoft YaHei',sans-serif;
+        text-align: center;
+        color: #262626;
+        overflow-y: auto;
+        font-size: 16px;
+      }
+      .them1 { background-color: #c4b395; }
+      .them2 { background-color: #c3d4e6; }
+      .them3 { background-color: #c8e8c8; }
+      .them4 { color: rgba(255,255,255,.5);background-color: #1a1a1a; }
+
+      .link { margin-top: 10px;width: 100vw;border-bottom: 1px solid #ffffff66;text-align: left; }
+      .link a, .link span {
+        display: inline-block;
+        line-height: 26px;
+        color: #080808d1;/*#00000066*/
+        font-size: 1.2em;
+      }
+      .link a { margin: 0 0 0 5px; }
+      .right-arrow:after { 
+        content: '';
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        border-top: 2px solid #080808d1;
+        border-right: 2px solid #080808d1;
+        transform: rotate(45deg);
+        margin: 0 0 1px 2px;
+      }
+      h3 { 
+        font-size: 1.5em;
+        font-weight: 400;
+        line-height: 1.2;
+        margin: 1em 0;
+        text-align: justify;
+        border-bottom: 1px solid #ffffff66;
+      }
+      #Main { margin: 0 10% 10%; }
+      #Main p { 
+        margin: .8em 0;
+        font-size: 1em;
+        line-height: 1.8;
+        text-indent: 1.5em;
+        text-align: justify;
+        word-wrap: break-word;
+        word-break: break-all;
+      }
+      .aside {
+        position: fixed;
+        width: 70px;
+        height: calc(100% * 0.35 - 70px);
+        top: 33%;
+        right: 0;
+        background-color: rgba(0,0,0,.5);
+        transform: translateX(70px);
+        transition: transform 500ms ease;
+      }
+      .aside span { display: block;position: relative;height: 25%;width: 100vw; }
+      .footer { 
+        position: fixed;
+        height: 70px;
+        width: 100vw;
+        bottom: 0;
+        background-color: rgba(0,0,0,.9);
+        transform: translateY(70px);
+        transition: transform 500ms ease;
+        text-align: left;
+        font-size: 0;
+      }
+      #aside-state:checked ~ .footer { transform: translateY(0px);transition: transform 500ms ease; }
+      #aside-state:checked ~ .aside  { transform: translateX(0px);transition: transform 500ms ease; }
+      .footer a { display: inline-block;height: 70px;width: 35%;color: #fff;font-size: 23px;font-weight: 300;line-height: 77px;text-align: center; }
+      .footer a:nth-child(2) { width: 30%;border: 1px solid #fff;border-style: none solid;box-sizing: border-box; }
+    </style>
+  </head>
+  <body class="them1">
+    <input type="checkbox" id="aside-state" style="display: none;">
+    <p class="link">
+      <a href="#">one</a>
+      <span class="right-arrow"></span>
+      <a href="#">tow</a>
+      <span class="right-arrow"></span>
+      <a href="#">tree</a>
+    </p>
+    <div id="Main">
+    <h3>春</h3>
+    <p>盼望着，盼望着，东风来了，春天的脚步近了。</p>
+    <p>一切都像刚睡醒的样子，欣欣然张开了眼。山朗润起来了，水涨起来了，太阳的脸红起来了。</p>
+    <p>小草偷偷地从土里钻出来，嫩嫩的，绿绿的。园子里，田野里，瞧去，一大片一大片满是的。坐着，躺着，打两个滚，踢几脚球，赛几趟跑，捉几回迷藏。风轻悄悄的,草软绵绵的。</p>
+    <p>桃树、杏树、梨树，你不让我，我不让你，都开满了花赶趟儿。红的像火，粉的像霞，白的像雪。花里带着甜味儿；闭了眼，树上仿佛已经满是桃儿、杏儿、梨儿。花下成千成百的蜜蜂嗡嗡地闹着，大小的蝴蝶飞来飞去。野花遍地是：杂样儿，有名字的，没名字的，散在草丛里，像眼睛，像星星，还眨呀眨的。</p>
+    <p>“吹面不寒杨柳风”，不错的，像母亲的手抚摸着你。风里带来些新翻的泥土的气息，混着青草味儿，还有各种花的香，都在微微润湿的空气里酝酿。鸟儿将巢安在繁花嫩叶当中，高兴起来了，呼朋引伴地卖弄清脆的喉咙，唱出宛转的曲子，跟轻风流水应和着。牛背上牧童的短笛，这时候也成天嘹亮地响着。</p>
+    <p>雨是最寻常的，一下就是三两天。可别恼，看，像牛毛，像花针，像细丝，密密地斜织着，人家屋顶上全笼着一层薄烟。树叶儿却绿得发亮，小草儿也青得逼你的眼。傍晚时候，上灯了，一点点黄晕的光，烘托出一片安静而和平的夜。在乡下，小路上，石桥边，有撑起伞慢慢走着的人，地里还有工作的农民，披着蓑戴着笠。他们的房屋，稀稀疏疏的，在雨里静默着。</p>
+    <p>天上风筝渐渐多了，地上孩子也多了。城里乡下，家家户户，老老小小，也赶趟儿似的，一个个都出来了。舒活舒活筋骨，抖擞抖擞精神，各做各的一份事去。“一年之计在于春”，刚起头儿，有的是工夫，有的是希望。</p>
+    <p>春天像刚落地的娃娃，从头到脚都是新的，它生长着。</p>
+    <p>春天像小姑娘，花枝招展的，笑着，走着。</p>
+    <p>春天像健壮的青年，有铁一般的胳膊和腰脚，领着我们上前去。</p>
+    </div>
+    <p class="aside">
+      <span class="them1" data-value="them1" onclick="cc(this.dataset.value)">屎黄</span>
+      <span class="them2" data-value="them2" onclick="cc(this.dataset.value)">淡蓝</span>
+      <span class="them3" data-value="them3" onclick="cc(this.dataset.value)">淡绿</span>
+      <span class="them4" data-value="them4" onclick="cc(this.dataset.value)">夜间</span>
+    </p>
+    <p class="footer">
+      <a href="#">上一页</a>
+      <a href="#">目录</a>
+      <a href="#">下一页</a>
+    </p>
+    <script>
+      document.getElementById("Main").onclick=function(){
+        let ipt = document.getElementById('aside-state');
+        ipt.checked=!ipt.checked;
+      }
+      function cc(e) { document.body.className=e }
+    </script>
+  </body>
+</html>
