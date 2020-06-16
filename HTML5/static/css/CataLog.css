@@ -1,0 +1,182 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    overflow: hidden;
+    box-sizing:border-box;
+    background: #FFF;
+}
+a {color:#DDDDDD;text-decoration: none;outline: 0;}
+a:hover {color:#EEEEEE;transition: all .3s;}
+/*  Main   */
+.Main {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.Main div {
+    margin: 8px;
+    border: double 3px;;
+    border-color: #f2f5f6;
+    box-sizing: border-box;
+}
+.Main .Uptown {
+    height: 30%;
+    background: tan;
+    -webkit-box-flex: 6666;
+}
+.Main .Downtown {
+    height: 70%;
+    background: antiquewhite;
+    display: -webkit-box;
+}
+.Main .Lefttown {
+    width: 30%;
+    -webkit-box-flex: 2333;
+}
+.Main .Righttown {
+    width: 70%;
+}
+/*  Main   */
+/*  Text   */
+.Text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.Text div {
+    margin: 8px;
+    box-sizing: border-box;
+}
+.Text .Head {
+    height: 15%;
+    background: tan;
+    -webkit-box-flex: 6666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: groove 1px;
+    border-color: #f2f5f6;
+}
+.Text .serch {
+    width: 80%;
+    text-align: center;
+}
+.Text .serch input {
+    width: 50%;
+}
+.Text .serch button {
+    width: auto;
+}
+.Text .Body {
+    height: 85%;
+    background: antiquewhite;
+    display: -webkit-box;
+    border: groove 1px;
+    border-color: #f2f5f6;
+}
+.Text .Body .TagBox {
+    width: 30%;
+    -webkit-box-flex: 2333;
+    border: groove 1px;
+    border-color: #f2f5f6;
+}
+.Text .Body .TagBox #TagSelect, .Text .Body .TagBox #TagList {
+    display: inline-flex;
+    width: 95.5%;
+    flex-flow: row wrap;
+}
+.Text .Body .TagBox #TagSelect {
+    min-height: 90px;
+    border-bottom: groove black 1px;
+}
+.Text .Body .TagBox .tg {
+    font-weight: bold;
+    height: 24px;
+    padding: 1px 4px;
+    margin: 0 2px 5px 2px;
+    border-radius: 5px;
+    border: 1px solid #989898;
+    background: #4f535b;
+}
+.Text .Body .TagBox .tg a {
+    text-decoration: none;
+}
+.Text .Body .TagBox .tg a:hover span {
+    display: block;
+}
+.Text .Body .TagBox .tg span {
+    display: none;
+    font-size: 0.8em;
+}
+.Text .Body .TagBox .tg span:nth-child(1) {
+    display: block;
+}
+
+.Text .Body .CataLog {
+    width: 70%;
+    border: groove 1px;
+    border-color: #f2f5f6;
+    font: 14px/40px PingFangSC-Regular,'-apple-system',Simsun;
+    font-family: PingFangSC-Regular,HelveticaNeue-Light,'Helvetica Neue Light','Microsoft YaHei',sans-serif;
+    font-size: 13px;
+    color: grey;
+    font-style: normal;
+}
+.Text .Body .CataLog table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.Text .Body .CataLog thead th {
+    font: 700 12px/16px PingFangSC-Regular,'-apple-system',Simsun;
+    height: 20px;
+    text-align: left;
+    vertical-align: top;
+    color: #262626;
+}
+.Text .Body .CataLog tbody tr:hover {
+    background: #f7f6f2;
+    transition: all .3s;
+}
+.Text .Body .CataLog td a {
+    color: grey;
+}
+.Text .Body .CataLog td a:hover {
+    color: #ed4259;
+}
+.Text .Body .CataLog .td-one {
+    color: grey;
+}
+.Text .Body .CataLog .name {
+    display: block;
+    overflow: hidden;
+    width: 138px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #262626;
+    transition: color .3s,background-color .3s;
+}
+.Text .Body .CataLog .chapter {
+    display: block;
+    overflow: hidden;
+    width: 280px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #666;
+}
+.Text .Body .CataLog .total {
+    font-size: 12px;
+    color: #999;
+}
+.Text .Body .CataLog .author {
+    display: block;
+    overflow: hidden;
+    width: 90px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.Text .Body .CataLog .date {
+    font: 12px/40px Arail;
+    text-align: right;
+    color: #666;
+}
