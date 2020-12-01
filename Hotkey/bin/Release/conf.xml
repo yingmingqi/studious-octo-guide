@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rot>
+  <HotKey id="10001" fsModifoers="MOD_ALT" vk="1">a!bc#defg</HotKey>
+  <HotKey id="10002" fsModifoers="MOD_SHIFT" vk="2">7355608</HotKey>
+  <HotKey id="10003" fsModifoers="MOD_CONTROL" vk="3">0x1a00064a</HotKey>
+</rot>

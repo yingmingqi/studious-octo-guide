@@ -1,0 +1,13 @@
+C:\Users\ym_qi\source\repos\Hotkey\bin\Release\Hotkey.exe.config
+C:\Users\ym_qi\source\repos\Hotkey\bin\Release\Hotkey.exe
+C:\Users\ym_qi\source\repos\Hotkey\bin\Release\Hotkey.pdb
+C:\Users\ym_qi\source\repos\Hotkey\obj\Release\Hotkey.csprojAssemblyReference.cache
+C:\Users\ym_qi\source\repos\Hotkey\obj\Release\MainWindow.baml
+C:\Users\ym_qi\source\repos\Hotkey\obj\Release\MainWindow.g.cs
+C:\Users\ym_qi\source\repos\Hotkey\obj\Release\App.g.cs
+C:\Users\ym_qi\source\repos\Hotkey\obj\Release\Hotkey_MarkupCompile.cache
+C:\Users\ym_qi\source\repos\Hotkey\obj\Release\Hotkey.g.resources
+C:\Users\ym_qi\source\repos\Hotkey\obj\Release\Hotkey.Properties.Resources.resources
+C:\Users\ym_qi\source\repos\Hotkey\obj\Release\Hotkey.csproj.GenerateResource.cache
+C:\Users\ym_qi\source\repos\Hotkey\obj\Release\Hotkey.exe
+C:\Users\ym_qi\source\repos\Hotkey\obj\Release\Hotkey.pdb

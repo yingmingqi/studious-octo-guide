@@ -1,0 +1,15 @@
+C:\Users\ym_qi\source\repos\Hotkey\bin\Debug\Hotkey.exe.config
+C:\Users\ym_qi\source\repos\Hotkey\bin\Debug\Hotkey.exe
+C:\Users\ym_qi\source\repos\Hotkey\bin\Debug\Hotkey.pdb
+C:\Users\ym_qi\source\repos\Hotkey\obj\Debug\Hotkey.csprojAssemblyReference.cache
+C:\Users\ym_qi\source\repos\Hotkey\obj\Debug\MainWindow.g.cs
+C:\Users\ym_qi\source\repos\Hotkey\obj\Debug\App.g.cs
+C:\Users\ym_qi\source\repos\Hotkey\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ym_qi\source\repos\Hotkey\obj\Debug\Hotkey_MarkupCompile.cache
+C:\Users\ym_qi\source\repos\Hotkey\obj\Debug\Hotkey_MarkupCompile.lref
+C:\Users\ym_qi\source\repos\Hotkey\obj\Debug\MainWindow.baml
+C:\Users\ym_qi\source\repos\Hotkey\obj\Debug\Hotkey.g.resources
+C:\Users\ym_qi\source\repos\Hotkey\obj\Debug\Hotkey.Properties.Resources.resources
+C:\Users\ym_qi\source\repos\Hotkey\obj\Debug\Hotkey.csproj.GenerateResource.cache
+C:\Users\ym_qi\source\repos\Hotkey\obj\Debug\Hotkey.exe
+C:\Users\ym_qi\source\repos\Hotkey\obj\Debug\Hotkey.pdb

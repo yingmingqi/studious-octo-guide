@@ -1,0 +1,108 @@
+﻿<Window x:Class="Hotkey.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="400" BorderThickness="0"
+        ContentRendered="Window_Loaded">
+
+    <Window.Resources>
+        <Style x:Key="Fsk">
+            <Setter Property="ComboBox.Width" Value="46"/>
+            <Setter Property="ComboBox.Height" Value="18"/>
+            <Setter Property="ComboBox.Margin" Value="5"/>
+            <Setter Property="ComboBox.FontSize" Value="10"/>
+            <Setter Property="ComboBox.Padding" Value="4,4,3,3"/>
+        </Style>
+        <Style x:Key="LinkChar">
+            <Setter Property="TextBlock.Width" Value="10"/>
+            <Setter Property="TextBlock.Height" Value="15"/>
+            <Setter Property="TextBlock.Margin" Value="2,5"/>
+        </Style>
+        <Style x:Key="Vk">
+            <Setter Property="TextBox.MaxLength" Value="1"/>
+            <Setter Property="TextBox.Width" Value="18"/>
+            <Setter Property="TextBox.Height" Value="18"/>
+            <Setter Property="TextBox.Margin" Value="2,5,4,5"/>
+            <Setter Property="TextBox.Padding" Value="2 0 0 0"/>
+        </Style>
+        <Style x:Key="Pass">
+            <Setter Property="PasswordBox.Width" Value="213"/>
+            <Setter Property="PasswordBox.Height" Value="18"/>
+            <Setter Property="PasswordBox.Margin" Value="2,5"/>
+        </Style>
+    </Window.Resources>
+    <TabControl TabStripPlacement="Top" Grid.Column="1">
+
+        <TabItem Name="logmsg" Header="Log">
+            <TextBox x:Name="Console" Foreground="blue"/>
+        </TabItem>
+
+        <TabItem Name="config" Header="Config">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="34"/>
+                    <RowDefinition Height="34"/>
+                    <RowDefinition Height="34"/>
+                    <RowDefinition Height="34"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="56"/>
+                </Grid.ColumnDefinitions>
+                <!--网格的1列，每行放置StackPanel-->
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <GroupBox Margin="1,0,1,1" BorderThickness="0">
+                        <StackPanel x:Name="hkA" Orientation ="Horizontal" HorizontalAlignment="Center" Height="32">
+                            <ComboBox x:Name="fska" Style="{StaticResource Fsk}"
+                                      DisplayMemberPath="Name" SelectedValuePath="Value"/>
+                            <TextBlock Style="{StaticResource LinkChar}"><Run Text="+"/></TextBlock>
+                            <TextBox x:Name="vka" Style="{StaticResource Vk}"/>
+                            <PasswordBox x:Name="passa" Style="{StaticResource Pass}"/>
+                        </StackPanel>
+                    </GroupBox>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <GroupBox Margin="1,0,1,1" BorderThickness="0">
+                        <StackPanel x:Name="hkB" Orientation ="Horizontal" HorizontalAlignment="Center" Height="32">
+                            <ComboBox x:Name="fskb" Style="{StaticResource Fsk}"
+                                      DisplayMemberPath="Name" SelectedValuePath="Value"/>
+                            <TextBlock Style="{StaticResource LinkChar}"><Run Text="+"/></TextBlock>
+                            <TextBox x:Name="vkb" Style="{StaticResource Vk}"/>
+                            <PasswordBox x:Name="passb" Style="{StaticResource Pass}"/>
+                        </StackPanel>
+                    </GroupBox>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="0">
+                    <GroupBox Margin="1,0,1,1" BorderThickness="0">
+                        <StackPanel x:Name="hkC" Orientation ="Horizontal" HorizontalAlignment="Center" Height="32">
+                            <ComboBox x:Name="fskc" Style="{StaticResource Fsk}"
+                                      DisplayMemberPath="Name" SelectedValuePath="Value"/>
+                            <TextBlock Style="{StaticResource LinkChar}"><Run Text="+"/></TextBlock>
+                            <TextBox x:Name="vkc" Style="{StaticResource Vk}"/>
+                            <PasswordBox x:Name="passc" Style="{StaticResource Pass}"/>
+                        </StackPanel>
+                    </GroupBox>
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="0">
+                    <GroupBox Margin="1,0,1,1" BorderThickness="0">
+                        <StackPanel x:Name="hkD" Orientation ="Horizontal" HorizontalAlignment="Center" Height="32">
+                            <ComboBox x:Name="fskd" Style="{StaticResource Fsk}"
+                                      DisplayMemberPath="Name" SelectedValuePath="Value"/>
+                            <TextBlock Style="{StaticResource LinkChar}"><Run Text="+"/></TextBlock>
+                            <TextBox x:Name="vkd" Style="{StaticResource Vk}"/>
+                            <PasswordBox x:Name="passd" Style="{StaticResource Pass}"/>
+                        </StackPanel>
+                    </GroupBox>
+                </Grid>
+                <!--网格的2列 放置StackPanel-->
+                <Grid Grid.Column="1" Grid.Row="0" Grid.RowSpan="5">
+                    <Button x:Name="reload" Height="20" Margin="5,100,5,2" Click="Button_Register">Register</Button>
+                </Grid>
+            </Grid>
+        </TabItem>
+    </TabControl>
+
+</Window>
