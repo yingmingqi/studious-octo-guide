@@ -1,0 +1,192 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<META name="ym" content="https://github.com/yingmingqi/studious-octo-guide">
+<style>
+    * {padding: 0;margin: 0;}
+    * {box-sizing: border-box;}
+    body {display: flex;justify-content: flex-start;align-items: center;}
+    #dropbox {
+        height: 800px;
+        width: 600px;
+        background: url("data:image/png;base64,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") no-repeat;
+        background-position: center;
+        border: 1px solid;
+    }
+    span {
+        border: 1px solid rgba(0, 0, 0, 0.555);
+        border-radius: 2px;
+        margin: 2px;
+        font-size: 12px;
+        padding: 2px;
+        background: rgb(255, 255, 255);
+        cursor: context-menu;
+    }
+    p {
+        text-indent: 2em;
+        word-wrap: break-word;
+        word-break: break-all;
+        margin-bottom: 4px;
+    }
+    [contenteditable]:focus{outline: none;}
+    .abc {margin-top: 16px;margin-bottom: 16px;text-indent: 0em;}
+</style>
+<!--  -->
+<ul style="
+    display: block;
+    height: 800px;
+    width: 200px;
+    border-left: 1px solid;
+    margin-left: 8px;
+    padding: 8px;
+    list-style-type: none;
+">
+    <li id="coding">Coding：<span style="background:#6f9bff">utf-8</span><span>gb2312</span></li>
+    <br><br>
+    <li>章节分割-正则表达式：</li>
+    <li><input type="text" id="regEx" placeholder="第(.*){'章','张'}"></li>
+    <br>
+    <li>去除空行：
+        <input type="radio" name="sex" value="true"><label>是</label>
+        <input type="radio" name="sex" value="false" checked=“checked”><label>否</label>
+    </li>
+    <br><br>
+    <li>
+        <button onclick="run()">分割章节</button>
+        <button onclick="copy()" style="float: right;">复制文本</button>
+    </li>
+    <br>
+    <li style="border-bottom: 1px solid;"></li>
+    <br><br>
+    <li>小说名：<input type="text" id="bookName"></li>
+    <li>作者：<input type="text" id="author" placeholder="未知"></li>
+
+</ul>
+<!--  -->
+<div id="dropbox"></div>
+<div id="viewbox" style="
+    display: none;
+    width: 100%;
+    max-width: 888px;
+    height: 800px;
+    font-size: 13px;
+    overflow-y: auto;
+    padding: 2em;
+" contenteditable="plaintext-only"></div>
+<!--  -->
+<script>
+    window.defCoding = "utf-8";/* 默认使用这种编码读取文件 */
+    const dropDiv = document.querySelector("#dropbox")
+    const viewBox = document.querySelector("#viewbox")
+
+    /* 只有在ondragover中阻止默认行为才能触发 ondrop 而不是 ondragleave */
+    document.ondragover = function(e) { e.preventDefault(); }
+    /* 阻止 document.ondrop的默认行为 在新窗口中打开文件 */
+    document.ondrop = function(e) { e.preventDefault(); }
+
+    dropDiv.ondragover = function(e) { e.preventDefault(); }
+    dropDiv.ondrop = function(e) {
+        /* 用全局变量保存上传的文件列表 */
+        window.uploadFiles = e.dataTransfer.files;
+        view(window.uploadFiles[0]);
+    }
+    
+    function view(file) {
+        if(!/text\/\w+/.test(file.type)) {
+            alert("请确保文件为txt文件");
+            return false
+        }
+        if(!file.size) {
+            alert("空文件");
+            return false
+        }
+        if(file.size>512000) {
+            alert("文件大于 500kb");
+            return false
+        }
+
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            let fileTxt = e.target.result;
+            window.textData = fileTxt;
+
+            dropDiv.style.display = "none";
+            viewBox.innerText=fileTxt;
+            viewBox.style.display = "block";
+        }
+        reader.readAsText(file,window.defCoding);
+        document.querySelector("#bookName").value=file.name.rsplit(".",1)[0]
+
+    }
+
+    const coding = document.querySelector("#coding").querySelectorAll("span")
+    coding.forEach(e=>{
+        e.addEventListener("click",function(el){
+            coding.forEach(e=>{e.style.background="#FFF"});
+
+            window.defCoding = el.target.innerText
+            el.target.style.background="#6f9bff";
+
+            view(window.uploadFiles[0]);
+        })
+    })
+
+    function splitText(documentation) {
+        let paragraph = documentation.split("\n");
+        let doc = {
+            name:"",
+            author:"",
+            charpter:[]
+        }
+        doc.name = document.querySelector("#bookName").value;
+        doc.author = document.querySelector("#author").value || "未知";
+
+        rex = document.querySelector("#regEx").value ? new RegExp(document.querySelector("#regEx").value,"i"):undefined
+
+        let bl = false;
+        document.querySelectorAll("input[type=radio]").forEach(e=>{
+            if(e.checked) {bl=e.value};
+        })
+
+        // console.log("bl=",bl)
+
+        // 分段分章节
+        for(i=0;i<paragraph.length;i++) {
+            let txt = paragraph[i].trim()
+            
+            if(bl&&txt.length == 0) {continue;}
+            //console.log(paragraph[i].trim().length,paragraph[i].trim())
+            if(rex && rex.test(txt)) {
+                doc.charpter.push([true,txt])
+            }
+            else {
+                doc.charpter.push([false,txt])
+            }
+        }
+
+        return doc
+    }
+
+    function run() {
+        window.rtextData = splitText(window.textData)
+
+        viewBox.innerText = "";
+        window.rtextData.charpter.forEach(e=>{
+            let dom = document.createElement("p");
+            if(e[0]) {dom.classList=["abc"]}
+            dom.innerText = e[1];
+            viewBox.appendChild(dom)
+        })
+    }
+
+    function copy() {
+        let dom = document.createElement("textarea")
+        //dom.style.display="none";
+        let abc = ""
+        viewBox.childNodes.forEach(e=>{abc=abc+e.innerText+'\n'})
+        dom.value = abc;
+        document.body.appendChild(dom);
+        dom.select();
+        if(document.execCommand('copy')) {document.execCommand('copy');console.log('复制成功');}
+        document.body.removeChild(dom);
+    }
+    
+</script>
