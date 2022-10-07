@@ -113,8 +113,7 @@
             viewBox.style.display = "block";
         }
         reader.readAsText(file,window.defCoding);
-        document.querySelector("#bookName").value=file.name.rsplit(".",1)[0]
-
+        document.querySelector("#bookName").value=file.name.split(".").slice(0,-1).join(".");
     }
 
     const coding = document.querySelector("#coding").querySelectorAll("span")
