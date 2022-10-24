@@ -21,10 +21,11 @@ def wirte():
     try:
         with open(Path+"\desktop.ini", 'w', encoding='ANSI') as F:
             ncf.write(F)
-        ctypes.windll.user32.MessageBoxW(0, "Tip", "Success", 0)
+        #ctypes.windll.shell32.SHChangeNotify(0x08000000,0x0000,None,None) # 刷新资源管理器
+        ctypes.windll.user32.MessageBoxW(0, "Success", "消息", 0)
         
     except:
-        ctypes.windll.user32.MessageBoxW(0, "Tip", "faile", 10)
+        ctypes.windll.user32.MessageBoxW(0, "faile", "消息", 10)
         
     finally:
         mainWindow.destroy()
@@ -59,9 +60,6 @@ if __name__ == "__main__":
                         "Prop4":{"name":"作者","text":None,"node":None},
                         "Prop5":{"name":"标记","text":None,"node":None}
                     },
-                '''"{D5CDD502-2E9C-101B-9397-08002B2CF9AE}":{
-                        "Prop2":{"name":"类别","text":None,"node":None}
-                    },'''
                 "{64440492-4C8B-11D1-8B70-080036B11A03}":{
                         "Prop9":{"name":"评级","text":None,"node":None} #数字 1-99
                     },
