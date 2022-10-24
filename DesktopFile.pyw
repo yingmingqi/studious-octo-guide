@@ -1,11 +1,12 @@
 '''
-
 '''
 
 import tkinter as tk
+from tkinter import messagebox
 import os, sys
 from functools import partial
 import configparser
+import ctypes
 
 
 def wirte():
@@ -17,9 +18,18 @@ def wirte():
                 #print(defined[section][key], node.get('0.0', 'end').strip())
                 if section not in ncf.sections(): ncf.add_section(section)
                 ncf.set(section, key, node.get('0.0', 'end').strip())
-
-    with open(Path+"\desktop.ini", 'w', encoding='ANSI') as F:
-        ncf.write(F)
+    try:
+        with open(Path+"\desktop.ini", 'w', encoding='ANSI') as F:
+            ncf.write(F)
+        ctypes.windll.user32.MessageBoxW(0, "Tip", "Success", 0)
+        
+    except:
+        ctypes.windll.user32.MessageBoxW(0, "Tip", "faile", 10)
+        
+    finally:
+        mainWindow.destroy()
+        
+        
     
 def createNode(rot,labelName,value=None):
     lable = tk.Label(rot,text=labelName+"：",anchor="w")
@@ -47,17 +57,19 @@ if __name__ == "__main__":
                         "Prop2":{"name":"标题","text":None,"node":None},
                         "Prop3":{"name":"主题","text":None,"node":None},
                         "Prop4":{"name":"作者","text":None,"node":None},
-                        "Prop5":{"name":"标签","text":None,"node":None},
-                        "Prop6":{"name":"评论","text":None,"node":None}
+                        "Prop5":{"name":"标记","text":None,"node":None}
                     },
-                "{D5CDD502-2E9C-101B-9397-08002B2CF9AE}":{
+                '''"{D5CDD502-2E9C-101B-9397-08002B2CF9AE}":{
                         "Prop2":{"name":"类别","text":None,"node":None}
-                    },
-                "{28636AA6-953D-11D2-B5D6-00C04FD918D0}":{
-                        "Prop9":{"name":"类型","text":None,"node":None}
-                    },
+                    },'''
                 "{64440492-4C8B-11D1-8B70-080036B11A03}":{
-                        "Prop9":{"name":"评级","text":None,"node":None}
+                        "Prop9":{"name":"评级","text":None,"node":None} #数字 1-99
+                    },
+                "{67DF94DE-0CA7-4D6F-B792-053A3E4F03CF}":{
+                        "Prop100":{"name":"标志颜色","text":None,"node":None} #1= Purple,2= Orange,3= Green,4= Yellow,5= Blue,6= Red
+                    },
+                "{56A3372E-CE9C-11D2-9F0E-006097C686F6}":{
+                        "Prop38":{"name":"副标题","text":None,"node":None}
                     }
             }
         
@@ -67,7 +79,7 @@ if __name__ == "__main__":
         # 设置窗口大小和位置
         # 500x600   表示窗口大小
         # +2750+300 表示窗口距离电脑屏幕的左边缘和上边缘的距离
-        mainWindow.geometry("360x480+2750+300")
+        mainWindow.geometry("360x480+800+300")
         # 禁用缩放
         mainWindow.resizable(False,False)
 
