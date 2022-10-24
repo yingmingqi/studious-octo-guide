@@ -22,10 +22,10 @@ def wirte():
         with open(Path+"\desktop.ini", 'w', encoding='ANSI') as F:
             ncf.write(F)
         #ctypes.windll.shell32.SHChangeNotify(0x08000000,0x0000,None,None) # 刷新资源管理器
-        ctypes.windll.user32.MessageBoxW(0, "Success", "消息", 0)
+        ctypes.windll.user32.MessageBoxW(0, "        写入 desktop.inin 文件，成功！！", "消息", 0)
         
     except:
-        ctypes.windll.user32.MessageBoxW(0, "faile", "消息", 10)
+        ctypes.windll.user32.MessageBoxW(0, "写入失败", "消息", 10)
         
     finally:
         mainWindow.destroy()
