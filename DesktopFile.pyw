@@ -2,11 +2,51 @@
 '''
 
 import tkinter as tk
-from tkinter import messagebox
 import os, sys
-from functools import partial
 import configparser
 import ctypes
+
+
+from ctypes import POINTER, Structure, c_int, sizeof, byref
+from ctypes.wintypes import BYTE, WORD, DWORD, LPWSTR
+
+FCSM_ICONFILE = 0x00000010
+FCS_FORCEWRITE = 0x00000002
+
+class GUID(Structure):
+    _fields_ = [
+        ('Data1', DWORD),
+        ('Data2', WORD),
+        ('Data3', WORD),
+        ('Data4', BYTE * 8)]
+
+class SHFOLDERCUSTOMSETTINGS(Structure):
+    _fields_ = [
+        ('dwSize', DWORD),
+        ('dwMask', DWORD),
+        ('pvid', POINTER(GUID)),
+        ('pszWebViewTemplate', LPWSTR),
+        ('cchWebViewTemplate', DWORD),
+        ('pszWebViewTemplateVersion', LPWSTR),
+        ('pszInfoTip', LPWSTR),
+        ('cchInfoTip', DWORD),
+        ('pclsid', POINTER(GUID)),
+        ('dwFlags', DWORD),
+        ('pszIconFile', LPWSTR),
+        ('cchIconFile', DWORD),
+        ('iIconIndex', c_int),
+        ('pszLogo', LPWSTR),
+        ('cchLogo', DWORD)]
+
+
+def setInvalidInfo(folderPath):
+    """ 写入不完整的 文件夹 图标信息 使资源管理器 强制刷新文件夹信息缓存 """
+    fcs = SHFOLDERCUSTOMSETTINGS()
+    fcs.dwSize = sizeof(fcs)
+    fcs.dwMask = FCSM_ICONFILE
+
+    ctypes.windll.shell32.SHGetSetFolderCustomSettings(byref(fcs), folderPath, FCS_FORCEWRITE)
+
 
 
 def wirte():
@@ -22,6 +62,10 @@ def wirte():
         with open(Path+"\desktop.ini", 'w', encoding='ANSI') as F:
             ncf.write(F)
         #ctypes.windll.shell32.SHChangeNotify(0x08000000,0x0000,None,None) # 刷新资源管理器
+        #os.system(r"attrib +r "+Path) #添加 文件夹只读属性
+        #os.system(r"attrib +s +h "+Path+"\desktop.ini") #添加 文件系统属性/隐藏属性
+        hr = setInvalidInfo(Path)
+        if hr: ctypes.windll.user32.MessageBoxW(0, "erro", "消息", 10)
         ctypes.windll.user32.MessageBoxW(0, "        写入 desktop.inin 文件，成功！！", "消息", 0)
         
     except:
@@ -53,6 +97,7 @@ if __name__ == "__main__":
         defined = {
                 ".ShellClassInfo":{
                         "infoTip":{"name":"备注","text":None,"node":None}
+                        #LocalizedResourceName 设置文件夹别名 显示名称
                     },
                 "{F29F85E0-4FF9-1068-AB91-08002B27B3D9}":{
                         "Prop2":{"name":"标题","text":None,"node":None},
@@ -84,6 +129,8 @@ if __name__ == "__main__":
         #tpath = r"C:\Users\yingm\Desktop\demo\dest" # ceshilujing
 
         if(os.path.exists(Path+"\desktop.ini")):
+            os.system(r"attrib "+Path+"\desktop.ini"+" -s -h") #删除 文件系统属性/隐藏属性
+            
             cf = configparser.ConfigParser()
             cf.read(Path+"\desktop.ini")
             for section in defined:
