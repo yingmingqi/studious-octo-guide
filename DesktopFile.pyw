@@ -129,8 +129,8 @@ if __name__ == "__main__":
         #tpath = r"C:\Users\yingm\Desktop\demo\dest" # ceshilujing
 
         if(os.path.exists(Path+"\desktop.ini")):
-            os.system(r"attrib "+Path+"\desktop.ini"+" -s -h") #删除 文件系统属性/隐藏属性
-            
+            os.system(r"attrib -s -h "+Path+"\desktop.ini") #删除 文件系统属性/隐藏属性
+
             cf = configparser.ConfigParser()
             cf.read(Path+"\desktop.ini")
             for section in defined:
